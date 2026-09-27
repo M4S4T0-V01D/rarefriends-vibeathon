@@ -65,7 +65,7 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **World:** 12 regions (Friendhollow, Hollow Farms, Whisperwood, Ashen Hills, Emberforge, Frostpeak, Glass Lake, Pale Dunes, Oasis, Murkmire, Mossy Ruins, the Pale Coast) and 2 dungeons (Murkmire Crypt, Hollow Depths), with banks, shops, an agility course and market stalls.
 - **Family perk:** Skeleton (+50% Prayer XP from bones) · Mask (better Thieving) · Family (shops 10% cheaper) · Cellular (HP regenerates 2× faster) · Asymmetry (8% chance of a second resource) · Hoverer (run drains 40% slower) · Colossus (+1 melee max hit) · Sparkling (gems 3× as often) · Hollow (+10% magic accuracy, 1 in 5 spells keeps its runes).
 - **Followers:** your other owned Friends can follow you, drawn with their canonical art: Gen 1 +5% XP … Gen 5+ +1%.
-- **Audio:** 16 procedural tracks (a main theme and one per region, dungeon and boss) plus level-up and quest fanfares. Settings has music and effects volumes.
+- **Audio:** 16 procedural tracks (a main theme and one per region, dungeon and boss) plus level-up and quest fanfares. Entering an area unlocks its track; the music player in Settings replays any you've found. Music and effects have their own volumes.
 - **Saves:** progress saves automatically for your wallet and Friend on this device. The adventurer card can be posted to X, tagged @RareFriendsNFT #RareFriends #RareFriendsRealm.
 
 Full rules, levels, monsters and controls: [games/rarefriends-realm/README.md](https://github.com/M4S4T0-V01D/rarefriends-realm/blob/main/games/rarefriends-realm/README.md).
@@ -111,7 +111,7 @@ classic browser RPGs such as *Old School RuneScape*; no assets, place names or c
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 24 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; saves incl. tampering; caskets; followers) | Pass |
+| `npm test`: 25 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; saves incl. tampering; caskets; followers; music unlocks) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
 | Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
