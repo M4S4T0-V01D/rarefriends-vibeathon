@@ -13,7 +13,7 @@
 | **Category** | Character Spotlight (also entering Economy Potential and Token Activity) |
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-cafe |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-cafe/ (GitHub Pages, deployed by CI from `main`) |
-| **Preview page** | https://m4s4t0-v01d.github.io/rarefriends-cafe/preview/ (screenshots, features, capsule odds, play button) |
+| **Preview page** | https://m4s4t0-v01d.github.io/rarefriends-cafe/preview/ (screenshots, features, capsule odds, play button, and a record button that plays the game's Street Bossa) |
 | **Stack** | FriendSDK **v0.1.2** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript |
 
 **One sentence:** A greyscale 2.5D isometric shop sim where your owned Rare Friend is the manager. Your other owned
@@ -111,6 +111,7 @@ NOTICE. Gameplay inspired by café management games such as *Moe Girl Cafe 2*; n
 | Browser, SDK CLI host, 960 px: shop pick, keyboard service, build (pointer + keyboard), floor + music tabs, staff, capsules ×5 → open all → collection → place, sound toggle | Pass |
 | Browser, 360 px touch: a touch start leaves music and sound running at an audible level; service and build bar | Pass |
 | Browser, custom host, two-Friend mock wallet: #3412 as chef with canonical art, full day → day card → Post to X (prefilled + picture copied), save and reload → restored | Pass |
+| Browser, preview page: the record button plays Street Bossa audibly on click (desktop) and tap (phone), and stops | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
 | Real-wallet playtest on Robinhood mainnet | By the builder (the build environment can't reach mainnet) |
 
