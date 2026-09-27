@@ -65,7 +65,7 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **Energy (fatigue):** tools cost energy; tired Friends slow down; at 2 am you pass out (you wake tired and a little poorer). Eat or sleep.
 - **Day/night:** a 6 am–2 am clock with dusk, glowing windows and lamps, and a night lullaby.
 - **Villagers:** eight Rare Friend villagers keep schedules (work, socialising, sheltering from rain), talk daily and have favourite gifts and hearts. A notice-board request every morning. **Your other owned Friends move into town** and water your crops once they reach 3 hearts.
-- **Camera:** rotate the 2.5D valley in quarter turns (Q / R or the buttons). WASD / arrows walk screen-relative; E acts; B bag; C clip.
+- **Camera:** rotate the 2.5D valley in quarter turns with ← / → (or the buttons) and zoom with ↑ / ↓ or the mouse wheel; zoomed out, the valley is a little diorama island. WASD walks screen-relative; E acts; B bag; C clip.
 - **Family perk:** Skeleton cheaper tools · Mask +10% prices · Family +25% friendship · Cellular seeds sometimes free · Asymmetry double harvests · Hoverer faster walking · Colossus +30 energy · Sparkling extra growth · Hollow double water.
 - **Friend Films:** **● Clip** records the game as a looping GIF (its own encoder) and a video with the music (MP4 in Chrome/Safari, WebM in Firefox), to post to X or save. Every night draws a diary card to post. Posts are tagged @RareFriendsNFT #RareFriends #RareFriendsValley and link to https://rarefriends.com/.
 - **Progress saves per wallet address** (on this device). Audio is procedural WebAudio: five seasonal and night tracks, including the café's Street Bossa, plus farm sounds.
