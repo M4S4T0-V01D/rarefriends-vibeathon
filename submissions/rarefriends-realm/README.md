@@ -56,7 +56,7 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 
 ## How to play
 
-- **Controls:** left-click does the first option (shown top-left); right-click or long-press lists every option (*Chop down*, *Attack Grumblin (level-5)*, *Talk-to*, *Pickpocket*, *Examine*…). WASD walks, R toggles run, scroll zooms, M opens the world map, the minimap walks you anywhere. F1–F9 switch tabs; Space and 1–5 drive dialogue.
+- **Controls:** left-click does the first option (shown top-left); right-click or long-press lists every option (*Chop down*, *Attack Grumblin (level-5)*, *Talk-to*, *Pickpocket*, *Examine*…). WASD walks; ← → turn and ↑ ↓ tilt the camera (or drag with the scroll wheel held), and the compass faces north again. R toggles run, scroll zooms, M opens the world map, the minimap walks you anywhere. Every monster shows a health bar and its level. F1–F9 switch tabs; Space and 1–5 drive dialogue.
 - **The tick:** everything runs on a 0.6 s game tick. You walk one tile per tick (two when running).
 - **Skills (15), old-school XP curve at a Realm rate of ×3:** Attack, Strength, Defence, Hitpoints, Magic, Prayer, Woodcutting, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas.
 - **Use items on things:** raw food on a range or fire, tinderbox on logs, ore at the furnace, bars at the anvil, needle on leather, chisel on a gem.
@@ -113,7 +113,7 @@ classic browser RPGs such as *Old School RuneScape*; no assets, place names or c
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
 | `npm test`: 25 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; saves incl. tampering; caskets; followers; music unlocks) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
-| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
+| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass reset; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
 | Browser, preview page: the main theme and a jukebox track play audibly on desktop and phone, and stop | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
