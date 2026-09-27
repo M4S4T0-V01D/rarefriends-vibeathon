@@ -60,10 +60,12 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **The tick:** everything runs on a 0.6 s game tick. You walk one tile per tick (two when running).
 - **Skills (15), old-school XP curve at a Realm rate of ×3:** Attack, Strength, Defence, Hitpoints, Magic, Prayer, Woodcutting, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas.
 - **Use items on things:** raw food on a range or fire, tinderbox on logs, ore at the furnace, bars at the anvil, needle on leather, chisel on a gem.
-- **Combat:** four styles, food, prayers (Thick Skin … Protect from Melee), twelve spells with runes (staffs autocast). Monsters retaliate, some attack on sight, all drop loot. Death is safe: you keep your items.
+- **Combat:** four styles, food, prayers (Paper Shield … Friend's Ward), a 26-spell book paid in sigils: Darts, Lances and Bursts, the curses Muddle, Wilt and Brittle, Rootsnare, Gilded and Golden Touch, Forgeheart, Far Reach, Bonebloom, two enchantments and six ways to travel (staffs autocast damage spells). Monsters retaliate, some attack on sight, all drop loot. Death is safe: you keep your items.
 - **Quests (9 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, The Lost Glimmer, and The Hollow King (level 92 boss).
+- **A living world:** walkable rolling hills lit by slope and traced with ink contours; cloud shadows, birds, butterflies, falling leaves, snow, dune dust, fireflies, jumping fish and forge smoke.
+- **Pixel art and animation:** trees, rocks, decor, every item, weapon and icon are pixel art with an ink edge like the canonical Friends; skills animate (axe swings and wood chips, pickaxe sparks, cast lines, anvil sparks, cooking steam, agility hops) and weapons swing.
 - **World:** 12 regions (Friendhollow, Hollow Farms, Whisperwood, Ashen Hills, Emberforge, Frostpeak, Glass Lake, Pale Dunes, Oasis, Murkmire, Mossy Ruins, the Pale Coast) and 2 dungeons (Murkmire Crypt, Hollow Depths), with banks, shops, an agility course and market stalls.
-- **Family perk:** Skeleton (+50% Prayer XP from bones) · Mask (better Thieving) · Family (shops 10% cheaper) · Cellular (HP regenerates 2× faster) · Asymmetry (8% chance of a second resource) · Hoverer (run drains 40% slower) · Colossus (+1 melee max hit) · Sparkling (gems 3× as often) · Hollow (+10% magic accuracy, 1 in 5 spells keeps its runes).
+- **Family perk:** Skeleton (+50% Prayer XP from bones) · Mask (better Thieving) · Family (shops 10% cheaper) · Cellular (HP regenerates 2× faster) · Asymmetry (8% chance of a second resource) · Hoverer (run drains 40% slower) · Colossus (+1 melee max hit) · Sparkling (gems 3× as often) · Hollow (+10% magic accuracy, 1 in 5 spells keeps its sigils).
 - **Followers:** your other owned Friends can follow you, drawn with their canonical art: Gen 1 +5% XP … Gen 5+ +1%.
 - **Audio:** 16 procedural tracks (a main theme and one per region, dungeon and boss) plus level-up and quest fanfares. Entering an area unlocks its track; the music player in Settings replays any you've found. Music and effects have their own volumes.
 - **Saves:** progress saves automatically for your wallet and Friend on this device. The adventurer card can be posted to X, tagged @RareFriendsNFT #RareFriends #RareFriendsRealm.
@@ -104,16 +106,16 @@ field of a save on load. There are no signatures or extra prompts.
 The world, creatures, townsfolk Friends, item art, music and sound effects are original procedural code. Your Friend and
 your followers use their canonical Generations sprites; Old Glimmer (#7730) and Brother Ossic (#3412) use the canonical
 sample frames from FriendSDK v0.1.2. Rare Friends artwork is used under the FriendSDK NOTICE. Gameplay is inspired by
-classic browser RPGs such as *Old School RuneScape*; no assets, place names or code from them are used.
+classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals, gems, sigils, spells, prayers and items have their own names, and no assets or code from it are used.
 
 ## Checks and known issues
 
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 25 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; saves incl. tampering; caskets; followers; music unlocks) | Pass |
+| `npm test`: 27 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; magic utility spells and Rootsnare; saves incl. tampering and pre-rename ids; caskets; followers; music unlocks) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
-| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass reset; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
+| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; chat over your head; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass reset; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
 | Browser, preview page: the main theme and a jukebox track play audibly on desktop and phone, and stop | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
