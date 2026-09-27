@@ -62,11 +62,13 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **Use items on things:** raw food on a range or fire, tinderbox on logs, ore at the furnace, bars at the anvil, needle on leather, chisel on a gem.
 - **Combat:** four styles, food, prayers (Paper Shield … Friend's Ward), a 26-spell book paid in sigils: Darts, Lances and Bursts, the curses Muddle, Wilt and Brittle, Rootsnare, Gilded and Golden Touch, Forgeheart, Far Reach, Bonebloom, two enchantments and six ways to travel (staffs autocast damage spells). Monsters retaliate, some attack on sight, all drop loot. Death is safe: you keep your items.
 - **Quests (9 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, The Lost Glimmer, and The Hollow King (level 92 boss).
+- **Real buildings:** brick walls with windows and pitched roofs (battlements on Hollow Hall, smoking chimneys); a roof lifts away as you walk in, walls in front of you drop to a cutaway, and a roof fades whenever it would hide you.
+- **Sound everywhere:** weapon swings, a voice for every creature (attack, hurt, death, aggro, idle), axes and picks on the beat, NPC speech blips, footsteps by ground, crackling fires, forge, water and regional wildlife.
 - **A living world:** walkable rolling hills lit by slope and traced with ink contours; cloud shadows, birds, butterflies, falling leaves, snow, dune dust, fireflies, jumping fish and forge smoke.
 - **Pixel art and animation:** trees, rocks, decor, every item, weapon and icon are pixel art with an ink edge like the canonical Friends; skills animate (axe swings and wood chips, pickaxe sparks, cast lines, anvil sparks, cooking steam, agility hops) and weapons swing.
 - **World:** 12 regions (Friendhollow, Hollow Farms, Whisperwood, Ashen Hills, Emberforge, Frostpeak, Glass Lake, Pale Dunes, Oasis, Murkmire, Mossy Ruins, the Pale Coast) and 2 dungeons (Murkmire Crypt, Hollow Depths), with banks, shops, an agility course and market stalls.
 - **Family perk:** Skeleton (+50% Prayer XP from bones) · Mask (better Thieving) · Family (shops 10% cheaper) · Cellular (HP regenerates 2× faster) · Asymmetry (8% chance of a second resource) · Hoverer (run drains 40% slower) · Colossus (+1 melee max hit) · Sparkling (gems 3× as often) · Hollow (+10% magic accuracy, 1 in 5 spells keeps its sigils).
-- **Followers:** your other owned Friends can follow you, drawn with their canonical art: Gen 1 +5% XP … Gen 5+ +1%.
+- **Followers:** your other owned Friends walk the tiles you leave behind like an old-school pet, drawn with their canonical art: Gen 1 +5% XP … Gen 5+ +1%.
 - **Audio:** 16 procedural tracks (a main theme and one per region, dungeon and boss) plus level-up and quest fanfares. Entering an area unlocks its track; the music player in Settings replays any you've found. Music and effects have their own volumes.
 - **Saves:** progress saves automatically for your wallet and Friend on this device. The adventurer card can be posted to X, tagged @RareFriendsNFT #RareFriends #RareFriendsRealm.
 
@@ -76,15 +78,15 @@ Full rules, levels, monsters and controls: [games/rarefriends-realm/README.md](h
 
 | Relic | Chance | RF value | Kept bonus | RF-exclusive wardrobe |
 | --- | --- | --- | --- | --- |
-| Plain Relic | 60% (6,000 bps) | 0.5 RF | +2% XP in every skill per relic (max 5) | Rose cape, Sage scarf, Paper crown |
-| Silver Relic | 28% (2,800 bps) | 1 RF | +10% coins from drops and pickpockets per relic (max 3) | Silver halo, Moonblue cape |
-| Moonlit Relic | 10% (1,000 bps) | 2 RF | Gather 10% faster per relic (max 3) | Moon wisps, Starlit hood |
-| Golden Relic | 2% (200 bps) | 5 RF | +10% XP and a golden aura while kept | Golden aura |
+| Plain Relic | 60% (6,000 bps) | 0.5 RF | +2% XP in every skill per relic (max 5) | Rose cape, Sage scarf, Paper crown, Butter bow |
+| Silver Relic | 28% (2,800 bps) | 1 RF | +10% coins from drops and pickpockets per relic (max 3) | Silver halo, Moonblue cape, Lantern familiar |
+| Moonlit Relic | 10% (1,000 bps) | 2 RF | Gather 10% faster per relic (max 3) | Moon wisps, Starlit hood, Ink wings |
+| Golden Relic | 2% (200 bps) | 5 RF | +10% XP and a golden aura while kept | Golden aura, Rarite crown |
 
 - **Price** 1 RF (`1000000000000000000` base units); buy ×1 or ×5. **Expected RF value** 0.88 RF per casket; top prize 5 RF.
 - **Consumable:** one casket opens into exactly one relic; single settlement, no reroll.
 - **Backing:** each purchased or pending casket reserves 5 RF; kept relics keep their fixed RF backing, with no expiry. Redeeming removes that relic's bonus.
-- **Wardrobe:** every casket also grants an uncollected piece of its tier, drawn on your Friend, or coins for duplicates (250/600/1,500/5,000). Wardrobe pieces carry no RF value and are saved with your adventure.
+- **Wardrobe:** every casket also grants an uncollected piece of its tier (12 in all), painted into your Friend's own sprite so it sits on the real head, shoulders and neck, or coins for duplicates (250/600/1,500/5,000). Wardrobe pieces carry no RF value and are saved with your adventure.
 
 Caskets use the SDK chance-game client (`buy` / `play` / `settle` / `redeem`) with runtime confirmations. **Economy design:**
 coins are earn-only and never convert to RF; RF is a boost, not a paywall; holding more (and better-generation) Friends
@@ -113,7 +115,7 @@ classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals,
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 27 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; magic utility spells and Rootsnare; saves incl. tampering and pre-rename ids; caskets; followers; music unlocks) | Pass |
+| `npm test`: 28 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; magic utility spells and Rootsnare; saves incl. tampering and pre-rename ids; caskets; followers; music unlocks) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
 | Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; chat over your head; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass reset; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
