@@ -2,7 +2,7 @@
 
 **▶ Play:** https://m4s4t0-v01d.github.io/rarefriends-realm/ · **Preview page:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ · **Source:** https://github.com/M4S4T0-V01D/rarefriends-realm
 
-*An old-school adventure starring the Rare Friend you own: fifteen skills, six quests, a large 2.5D world and a Hollow King to end.*
+*An old-school adventure starring the Rare Friend you own: seventeen skills, six quests, a large 2.5D world and a Hollow King to end.*
 
 ![RareFriends Realm: Friendhollow square in greyscale isometric, with Rare Friends, a fountain and the minimap](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/town.png)
 
@@ -58,11 +58,16 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 
 - **Controls:** left-click does the first option (shown top-left); right-click or long-press lists every option (*Chop down*, *Attack Grumblin (level-5)*, *Talk-to*, *Pickpocket*, *Examine*…). WASD walks; ← → turn and ↑ ↓ tilt the camera (or drag with the scroll wheel held), and the compass faces north again. R toggles run, scroll zooms, M opens the world map, the minimap walks you anywhere. Every monster shows a health bar and its level. F1–F9 switch tabs; Space and 1–5 drive dialogue.
 - **The tick:** everything runs on a 0.6 s game tick. You walk one tile per tick (two when running).
-- **Skills (15), old-school XP curve at a Realm rate of ×3:** Attack, Strength, Defence, Hitpoints, Magic, Prayer, Woodcutting, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas.
+- **Skills (17), old-school XP curve at a Realm rate of ×3:** Attack, Strength, Defence, Ranged, Hitpoints, Magic, Prayer, Woodcutting, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas.
+- **Ranged:** bows by wood (Shortbow to Ashwood, plus the Gloomfang bow) fire the best arrows in your pack (pewter to rarite), with Accurate, Rapid and Longrange styles; most arrows can be picked up again.
+- **Slayer:** Warden Thistle gives kill tasks, each kill on task pays Slayer XP, and finished tasks pay points for her rewards (the Warden's helm, the Gloomfang bow, lamps). Mire crawlers, frost wisps and gloom hounds can only be wounded at Slayer 10, 30 and 50.
+- **Mastery capes:** reach 99 and the Keeper of Capes sells that skill's cape (99,000 coins); master two skills and they come trimmed, master all 17 for the Grandmaster's cape. Capes are worn on your Friend's sprite.
 - **Use items on things:** raw food on a range or fire, tinderbox on logs, ore at the furnace, bars at the anvil, needle on leather, chisel on a gem.
 - **Combat:** four styles, food, prayers (Paper Shield … Friend's Ward), a 26-spell book paid in sigils: Darts, Lances and Bursts, the curses Muddle, Wilt and Brittle, Rootsnare, Gilded and Golden Touch, Forgeheart, Far Reach, Bonebloom, two enchantments and six ways to travel (staffs autocast damage spells). Monsters retaliate, some attack on sight, all drop loot. Death is safe: you keep your items.
 - **Quests (9 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, The Lost Glimmer, and The Hollow King (level 92 boss).
-- **Real buildings:** brick walls with windows and pitched roofs (battlements on Hollow Hall, smoking chimneys); a roof lifts away as you walk in, walls in front of you drop to a cutaway, and a roof fades whenever it would hide you.
+- **Real buildings:** brick walls with windows and pitched roofs (smoking chimneys); a roof lifts away as you walk in, walls in front of you drop to a cutaway, and a roof fades whenever it would hide you.
+- **Friendhollow:** the fountain square, the bank, the chapel, Market Street (Hollis Armoury, Edge & Hilt, Fletch & Feather, the Warden's Lodge), the Sleepy Friend inn, the Rare Market, and Friendhollow Castle: three storeys with spiral stairs up to King Hollis's throne room and the battlements.
+- **Day and night:** a 24-minute day with warm dusks and blue nights lit by lamps, torches, fires and your own small light; a clearer, colour-coded minimap.
 - **Sound everywhere:** weapon swings, a voice for every creature (attack, hurt, death, aggro, idle), axes and picks on the beat, NPC speech blips, footsteps by ground, crackling fires, forge, water and regional wildlife.
 - **A living world:** walkable rolling hills lit by slope and traced with ink contours; cloud shadows, birds, butterflies, falling leaves, snow, dune dust, fireflies, jumping fish and forge smoke.
 - **Pixel art and animation:** trees, rocks, decor, every item, weapon and icon are pixel art with an ink edge like the canonical Friends; skills animate (axe swings and wood chips, pickaxe sparks, cast lines, anvil sparks, cooking steam, agility hops) and weapons swing.
@@ -87,6 +92,11 @@ Full rules, levels, monsters and controls: [games/rarefriends-realm/README.md](h
 - **Consumable:** one casket opens into exactly one relic; single settlement, no reroll.
 - **Backing:** each purchased or pending casket reserves 5 RF; kept relics keep their fixed RF backing, with no expiry. Redeeming removes that relic's bonus.
 - **Wardrobe:** every casket also grants an uncollected piece of its tier (12 in all), painted into your Friend's own sprite so it sits on the real head, shoulders and neck, or coins for duplicates (250/600/1,500/5,000). Wardrobe pieces carry no RF value and are saved with your adventure.
+
+**The Rare Market:** traders in Friendhollow, Emberforge, the Oasis, Frostpeak and Pike's Pier (each by a casket chest) sell
+bundles. RF buys one thing in the SDK's economy, the Rare Casket, so every bundle buys caskets and adds guaranteed goods:
+Realm tablets (1 RF), a hero's hamper (1 RF), a Lamp of insight (2 RF), 40 Slayer points (2 RF), an archer's quiver
+(2 RF), or the wardrobe piece of your choice (3 RF).
 
 Caskets use the SDK chance-game client (`buy` / `play` / `settle` / `redeem`) with runtime confirmations. **Economy design:**
 coins are earn-only and never convert to RF; RF is a boost, not a paywall; holding more (and better-generation) Friends
@@ -115,9 +125,9 @@ classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals,
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 28 engine tests (XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; magic utility spells and Rootsnare; saves incl. tampering and pre-rename ids; caskets; followers; music unlocks) | Pass |
+| `npm test`: 33 engine tests (Ranged; Slayer tasks, points and Slayer-only creatures; mastery capes; Rare Market bundles, tablets and lamps; the castle stairs; XP curve; world determinism and on-foot reachability of every station, rock, spot, ladder, NPC and the boss; pathfinding; WASD; menus; woodcutting, firemaking, cooking; fishing; mining, smelting, smithing; combat, loot, aggression, safe death; A Friend's Feast and Grumblin Trouble end to end; thieving; an agility lap; magic; prayer; shops and bank; magic utility spells and Rootsnare; saves incl. tampering and pre-rename ids; caskets; followers; music unlocks) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
-| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; chat over your head; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass reset; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
+| Browser, custom host, two-Friend mock wallet (1280 px): title screen; real mouse click chops a tree; right-click menu; dialogue; WASD; chat over your head; camera turn/tilt by arrow keys and middle-drag, WASD at an angle, compass turns north; a level-up; smelting; a shop; finishing A Friend's Feast; combat by right-click; bank; world map; 5 caskets through the runtime's confirmations; a Rare Market bundle from a trader; the castle's spiral stairs by real clicks; nightfall; adventurer card → Post to X (prefilled + picture copied); a follower; a 14-region tour; save written and restored after reload | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
 | Browser, preview page: the main theme and a jukebox track play audibly on desktop and phone, and stop | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
