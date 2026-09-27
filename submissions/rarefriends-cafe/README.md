@@ -113,7 +113,7 @@ NOTICE. Gameplay inspired by café management games such as *Moe Girl Cafe 2*; n
 | Browser, custom host, two-Friend mock wallet: #3412 as chef with canonical art, full day → day card → Post to X (prefilled + picture copied), save and reload → restored | Pass |
 | Browser, preview page: the record button plays Street Bossa audibly on click (desktop) and tap (phone), and stops | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
-| Real-wallet playtest on Robinhood mainnet | By the builder (the build environment can't reach mainnet) |
+| Real-wallet playtest on Robinhood mainnet: owned Friends as staff with generation tiers and levels, close and reload to resume, day card (the one above is from this play) | Pass: played extensively by the builder |
 
 Known limitations: saves are per device and browser, keyed by wallet address, and client-side. Capsule balances and kept
 recipes reset on reload (SDK session ledger); collectibles persist. Guest Friends are procedural art in the Rare Friends
