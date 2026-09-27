@@ -106,15 +106,15 @@ NOTICE. Gameplay inspired by café management games such as *Moe Girl Cafe 2*; n
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict, game + host) | Pass |
-| `npm test`: 27 engine tests (plan/routing, street walk-ins, service, day cycle, placement, expansions, generation tiers, worker XP, roles, fatigue/breaks, saves + migration, collectibles, music unlocks, X post text, economy) | Pass |
+| `npm test`: 28 engine tests (plan/routing, street walk-ins, service, day cycle, placement, expansions, generation tiers, worker XP, roles, fatigue/breaks, saves + migration, collectibles, music unlocks, X post text, economy) | Pass |
 | `npm run check` (`friendsdk check`) | Pass: expected reward 0.88 RF, max 5 RF |
 | Browser, SDK CLI host, 960 px: shop pick, keyboard service, build (pointer + keyboard), floor + music tabs, staff, capsules ×5 → open all → collection → place, sound toggle | Pass |
-| Browser, 360 px touch: service and build bar | Pass |
+| Browser, 360 px touch: a touch start leaves music and sound running at an audible level; service and build bar | Pass |
 | Browser, custom host, two-Friend mock wallet: #3412 as chef with canonical art, full day → day card → Post to X (prefilled + picture copied), save and reload → restored | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
 | Real-wallet playtest on Robinhood mainnet | By the builder (the build environment can't reach mainnet) |
 
 Known limitations: saves are per device and browser, keyed by wallet address, and client-side. Capsule balances and kept
 recipes reset on reload (SDK session ledger); collectibles persist. Guest Friends are procedural art in the Rare Friends
-style. The owned-staff roster depends on the RPC returning the wallet's transfer history. Audio starts on the first tap.
+style. The owned-staff roster depends on the RPC returning the wallet's transfer history. Audio starts on the first tap; on iPhones before iOS 17, silent mode may keep it quiet.
 Wallet support is the SDK's (injected / EIP-6963). There is no wallet or fund risk: nothing is signed or sent.
