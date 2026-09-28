@@ -23,6 +23,18 @@ quests on a 240 × 240 tile island, playing alongside everyone else online: chat
 boss together. Simulated $RAREFRIENDS buys Rare Caskets (kept-or-redeemed relics and wardrobe pieces), bundles and
 mounts.
 
+## The Realm in motion
+
+| Play together | Ride horses and unicorns | The Ashen Colossus, with a crowd |
+| --- | --- | --- |
+| ![Two players meeting by the fountain and chatting](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-together.gif>) | ![Riding a unicorn through Friendhollow](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-ride.gif>) | ![Fighting the Ashen Colossus world boss](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-boss.gif>) |
+| **Slaying dragons** | **Magic that lights the night** | **Level-up fireworks** |
+| ![Shooting ash drakes in Wyrmreach](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-dragon.gif>) | ![Casting fire spells at night](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-magic.gif>) | ![Fireworks over Friendhollow at night](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-fireworks.gif>) |
+| **Storms everyone shares** | **Day turns to night** | **19 skills to 99** |
+| ![Rain and lightning over Friendhollow](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-storm.gif>) | ![Nightfall over the town, lamps lighting up](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-nightfall.gif>) | ![Chopping trees in Whisperwood](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-woodcutting.gif>) |
+| **A hand-built pixel Realm** | **The skillcape emote** | **The full one-minute trailer** |
+| ![Orbiting Friendhollow Castle](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-castle.gif>) | ![A Friend performing the skillcape emote](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-emote.gif>) | [▶ Watch the trailer](https://m4s4t0-v01d.github.io/rarefriends-realm/preview/#trailer) (with its soundtrack) |
+
 ## Screenshots
 
 | Riding a unicorn | The Ashen Colossus (world boss) | A duel in the Sparring Ring |
@@ -34,6 +46,8 @@ mounts.
 | ![Lightning over Friendhollow](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-storm.png) | ![Fireworks over the square at night](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-fireworks.png) | ![A Friend in a helm with a sabre, shield and cape](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-gear-knight.png) |
 | **The Realm Daily** | **32 achievements** | **The Hollow King** |
 | ![The daily streak and challenges](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-daily.png) | ![The achievements tab](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-achievements.png) | ![The Hollow King in his throne room](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/region-throne.png) |
+| **First steps (a guided start)** | **Trading with another player** | **Skill guides and a recipe book** |
+| ![The First steps card and gold arrow](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/first-steps.png>) | ![The trade screen with another player](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/trade.png>) | ![The Woodcutting guide, level by level](<https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/skill-guide.png>) |
 
 **Adventurer card, ready to post on X** (your Friend exactly as in the Realm, riding its mount):
 
