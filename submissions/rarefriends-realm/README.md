@@ -1,6 +1,6 @@
 # RareFriends Realm
 
-**▶ Play:** https://m4s4t0-v01d.github.io/rarefriends-realm/ · **Preview page:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ · **Source:** https://github.com/M4S4T0-V01D/rarefriends-realm
+**▶ Play:** https://m4s4t0-v01d.github.io/rarefriends-realm/ · **🎬 Trailer:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/#trailer · **Preview page:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ · **Source:** https://github.com/M4S4T0-V01D/rarefriends-realm
 
 *An old-school adventure starring the Rare Friend you own: nineteen skills, six quests, a large 2.5D world and a Hollow King to end.*
 
@@ -13,13 +13,14 @@
 | **Category** | Character Spotlight (also entering Economy Potential and Token Activity) |
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-realm |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-realm/ (GitHub Pages, deployed by CI from `main`) |
-| **Preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (screenshots, regions, quests, casket odds, and a jukebox of all 18 music tracks) |
+| **Preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a one-minute trailer at the top, screenshots, regions, quests, casket odds, and a jukebox of all 18 music tracks) |
 | **Stack** | FriendSDK **v0.1.2** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript |
 
 **One sentence:** A tick-based, old-school browser RPG where your verified Rare Friend is the hero, drawn from its
 canonical on-chain sprite with a family perk. You right-click your way through a 240 × 240 tile island, training nineteen
 skills and finishing six quests, while your other owned Friends follow you for bonus XP. Rare Caskets spend (simulated)
-$RAREFRIENDS on kept-or-redeemed relics and wardrobe pieces.
+$RAREFRIENDS on kept-or-redeemed relics and wardrobe pieces. Everyone online shares the Realm: they chat, trade,
+duel in the Sparring Ring, and take down a world boss together.
 
 ## Screenshots
 
@@ -75,6 +76,11 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **Real buildings, in pixel art:** half-timbered plaster houses and stone keeps, textured in the same chunky pixels as the trees and rocks, with leaded windows, shingle roofs and smoking chimneys; a roof lifts away as you walk in, walls in front of you drop to a cutaway, and a roof fades whenever it would hide you.
 - **Friendhollow:** the fountain square, the bank, the chapel, Market Street (Hollis Armoury, Edge & Hilt, Fletch & Feather, the Warden's Lodge), the Sleepy Friend inn, the Rare Market, and Friendhollow Castle: three storeys with spiral stairs up to King Hollis's throne room and the battlements.
 - **Day and night:** a 24-minute day with warm dusks and dark nights. Light pools on the ground around lamps, torches and fires (which flicker) and your own dim light. The minimap is clearer and colour-coded.
+- **A world boss:** the Ashen Colossus (level 210) rises in Wyrmreach every two hours (even UTC hours) for twenty minutes, for everyone at once. Its HP is shared, and everyone who wounds it gets the loot, whoever lands the last blow.
+- **The Sparring Ring:** a fenced ring east of Market Street where players duel by right-clicking each other. Duels are safe (the loser is restored at once, nothing is lost), each game checks both players are in the ring and caps every hit, and wins and losses are counted.
+- **Pets, achievements and hiscores:** six pets found by chance while training (woodcutting, mining, fishing, Sigilcraft, dragons, the Colossus) follow you and are seen by others. 32 achievements sit on their own tab and on the adventurer card, and hiscores rank you against every player you've met.
+- **The Realm Daily:** a login streak with rewards on a seven-day cycle, three daily challenges shared by everyone with a chest for all three, and an update log that pops up after each update (a button by the minimap reopens it).
+- **Little things:** level-up fireworks that nearby players see, hoofbeats, dust and a whinny when riding, footprints in snow and sand, splashes in the bog, a beam of light over rare drops, and emote sync (a friend near you emotes, your Friend joins in).
 - **Weather everyone shares:** the sky follows the real clock in four-minute spells, so every player sees the same weather at once. It can be clear, rainy, or a storm with lightning, thunder after the flash and a darker sky. Dawn brings ground fog, the Murkmire is always misty, and deserts and peaks stay dry.
 - **The Friendhollow stables:** eight mounts for RF: chestnut, piebald, bay, dapple grey, palomino and black warhorse, plus a rainbow-maned unicorn and a moonlit unicorn. Riding carries you two or three tiles a tick without run energy, and each mount has a gift: healing, faster gathering, more coins, Defence, XP or light in the dark. Horses and a unicorn graze in the paddock, and other players see you riding.
 - **Gear you can see:** helms, hats, shields and weapons are painted into your Friend's own pixels. Blades sit in a ready guard, staffs stand upright with their orb, bows are held by the grip and axes rest on the shoulder. They rock with your step and swing free only mid-attack.
