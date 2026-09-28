@@ -195,8 +195,10 @@ the page. The world is far larger and scrolls under a camera, and every menu, pa
 1. A read-only `readOwnedFriends` roster with generations (account-filtered, `eth_accounts` only).
 2. `localStorage` saves keyed by wallet and Friend.
 3. Adventurer-card sharing (share sheet, or clipboard plus a prefilled X post).
-4. Multiplayer (`host/net.ts`): peers meet through Trystero over public Nostr relays. Only Friend IDs are shared, never
-   wallet addresses. Everything received is validated field by field, rate-limited, and stripped of links, and the
+4. Multiplayer (`host/net.ts`): direct WebRTC links through Trystero (introduced over public Nostr relays), plus a fallback
+   for networks that block direct links. Every message also travels as a signed, ephemeral Nostr event through public
+   relays, so players can always reach each other, and each message counts once whichever path it took. Only Friend IDs
+   are shared, never wallet addresses. Everything received is validated field by field, rate-limited, and stripped of links, and the
    sandboxed game itself never touches the network.
 
 The game receives the roster, save and peers over `postMessage`, uses the roster only when it contains the Friend the
@@ -221,7 +223,7 @@ multiplayer testing, and being awesome.
 | `npm test`: 53 engine tests: the XP curve and formulas; woodcutting, firemaking and cooking; fishing; mining, smelting and smithing; thieving; an agility lap; Fletching; Sigilcraft; combat, loot, aggression and safe death; magic and its utility spells; prayer; Ranged, Slayer and dragonfire; mastery capes; A Friend's Feast and Grumblin Trouble end to end; the castle stairs; pathfinding and menus; shops, selling and buy-back, the bank; saves (round trip, tampering, old ids); caskets, bundles, mounts; trading (including crossed requests and a lost message); shared fights and the world boss's shared loot; duels; pets; achievements and hiscores; the daily streak, challenges and chest; the update log; referrals and their daily cap; first steps; world determinism and on-foot reachability of every station, NPC, ladder and boss | Pass |
 | `npm run check` (`friendsdk check`) | Pass: valid; expected reward 0.88 RF, max 5 RF |
 | Browser, SDK runtime with a two-Friend mock wallet: title screen; a real mouse click chops a tree and First steps moves on; right-click menus and dialogue; WASD; chat; camera turn, tilt and compass; a level-up; smelting; a shop; A Friend's Feast; combat; bank; world map; 5 caskets through the runtime's confirmations; a Rare Market bundle; adventurer card → Post to X; the Realm Daily (claim, challenges, update log); a performance check (see below); the castle's spiral stairs by real clicks; nightfall; a 14-region tour; save restored after reload | Pass |
-| Browser, two players in two tabs: seeing each other walk, right-click menu, friends list, party bonus, public chat, whispers (links stripped), emotes and emote sync, a shared drop, a full trade by clicks, a duel in the ring, a shared fight, a referral, going offline | Pass |
+| Browser, two players in two tabs (and, over the real public relays, with direct links blocked): seeing each other walk, right-click menu, friends list, party bonus, public chat, whispers (links stripped), emotes and emote sync, a shared drop, a full trade by clicks, a duel in the ring, a shared fight, a referral, going offline | Pass |
 | Browser, phone in landscape (844 × 390, touch): tap to walk | Pass |
 | Browser, preview page: trailer at the top (muted, then with sound), main theme and jukebox play audibly on desktop and phone; skill guides and recipe book | Pass |
 | All of the above in GitHub Actions before each Pages deploy | Pass |
@@ -236,6 +238,6 @@ High takes about 22 ms in the busiest view.
 **Known limitations:**
 - Saves are client-side, per device and browser, keyed by wallet and Friend; save codes carry them to another browser.
 - Casket balances and kept relics reset on reload (the SDK's session ledger); wardrobe pieces, mounts and everything else persist.
-- Multiplayer is peer to peer: each game runs its own world, and shared things (fights, the world boss, trades, duels, drops) are agreed between games. Everything received is validated, but a modified client could misreport its own progress. Public relays can be slow to introduce players at first.
+- Multiplayer is peer to peer: each game runs its own world, and shared things (fights, the world boss, trades, duels, drops) are agreed between games. Everything received is validated, but a modified client could misreport its own progress. On networks that block direct links, messages go through public relays (a little slower, and readable by anyone watching the room, like any public chat); private messages use a direct link whenever there is one.
 - Audio starts on the first tap; on iPhones before iOS 17, silent mode may keep it quiet.
 - Wallet support is the SDK's (injected / EIP-6963). There is no wallet or fund risk: nothing is signed or sent.
