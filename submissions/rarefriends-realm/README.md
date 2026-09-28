@@ -15,7 +15,7 @@ with everyone playing, and a Hollow King to end.*
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-realm |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-realm/ (GitHub Pages, deployed by CI from `main` after every check passes) |
 | **Trailer and preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a one-minute trailer recorded from the game, what's new, screenshots, casket odds, and a jukebox of all 18 music tracks) |
-| **Stack** | FriendSDK **v0.1.2** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript; Trystero (WebRTC over Nostr relays) in the host page for multiplayer |
+| **Stack** | FriendSDK **v0.1.3** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript; Trystero (WebRTC over Nostr relays) in the host page for multiplayer |
 
 **One sentence:** A tick-based, old-school browser MMO where your verified Rare Friend is the hero, drawn from its
 canonical on-chain sprite with its family's perk and dressed in the gear you wear. You train nineteen skills and finish six
@@ -73,7 +73,7 @@ npm run check      # FriendSDK game validation
 npm test           # engine tests;  npm run test:browser for the browser checks
 ```
 
-Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official `v0.1.2` tag.
+Node.js 22+. FriendSDK v0.1.3 is vendored from the official v0.1.3 release archive (the hotfix for owned-Friend discovery on Robinhood mainnet).
 
 ## How to play
 
@@ -114,7 +114,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 ### The world
 
 - **14 regions and 2 dungeons,** each with its own music: Friendhollow, with a hanging sign outside every shop and bank and banners of your own Friend around the square, its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood; the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
-- **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
+- **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Every fish is its own species, chicken is a drumstick and beef a steak (browned with grill marks when cooked), and each ore shows its own metal's veins. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
 - **A living world:** walkable rolling hills; a 24-minute day with dark nights lit by lamps, torches and fires; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
 - **Sound everywhere:** 18 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
 
@@ -183,7 +183,7 @@ a gift. The RF price buys that many Rare Caskets, and the mount comes with them.
 
 **Economy design:** coins are earn-only and never convert to RF, so the game is complete without spending. RF is a boost
 and a collection (relics, wardrobe, mounts), not a paywall, and holding more (and better-generation) Friends pays off as
-followers. Proposed future RF integrations, which need APIs beyond SDK v0.1.2: cloud saves, a holder-to-holder trading
+followers. Proposed future RF integrations, which need APIs beyond SDK v0.1.3: cloud saves, a holder-to-holder trading
 post, RF-priced cosmetics with burn, live Dice-RNG caskets, and on-chain world-boss leaderboards.
 
 ## SDK integration notes
@@ -208,7 +208,7 @@ runtime just verified, and validates every field of a save on load. There are no
 
 The world, creatures, townsfolk Friends, mounts, pets, item art, music and sound effects are original procedural code. Your
 Friend and your followers use their canonical Generations sprites; Old Glimmer (#7730) and Brother Ossic (#3412) use the
-canonical sample frames from FriendSDK v0.1.2. Rare Friends artwork is used under the FriendSDK NOTICE. Gameplay is
+canonical sample frames from FriendSDK v0.1.3. Rare Friends artwork is used under the FriendSDK NOTICE. Gameplay is
 inspired by classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals, gems, sigils, spells, prayers
 and items have their own names, and no assets or code from it are used.
 
