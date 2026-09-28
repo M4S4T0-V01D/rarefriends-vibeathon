@@ -210,6 +210,9 @@ canonical sample frames from FriendSDK v0.1.2. Rare Friends artwork is used unde
 inspired by classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals, gems, sigils, spells, prayers
 and items have their own names, and no assets or code from it are used.
 
+**Special thanks** to **LUCKY CHAD || D.Y.O.O.R || ( BuildAnything ARC )** (@WHOSAYLUCK) for ideas, dev help,
+multiplayer testing, and being awesome.
+
 ## Checks and known issues
 
 | Check | Result |
