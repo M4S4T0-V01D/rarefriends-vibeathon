@@ -93,7 +93,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 
 ### Skills, combat and quests
 
-- **19 skills on the old-school XP curve** (at a Realm rate of ×3): Attack, Strength, Defence, Ranged, Hitpoints, Magic, Prayer, Sigilcraft, Woodcutting, Fletching, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas. Click any skill for what it unlocks at every level; a recipe book lists every recipe.
+- **19 skills on the old-school XP curve** (at a Realm rate of ×3, eased in: about half speed at level 1, the full rate from level 30): Attack, Strength, Defence, Ranged, Hitpoints, Magic, Prayer, Sigilcraft, Woodcutting, Fletching, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas. Click any skill for what it unlocks at every level; a recipe book lists every recipe.
 - **Combat:** four melee styles, Ranged (bows by wood, the best arrows in your pack, three styles), prayers, and a 26-spell book paid in sigils (Darts, Lances and Bursts in four elements, curses, Rootsnare, Gilded Touch, Forgeheart, enchantments and six teleports). Monsters retaliate, some attack on sight, all drop loot, and rare drops stand in a beam of light. Death is safe: you keep your items.
 - **Slayer:** Warden Thistle gives kill tasks and points for rewards; some creatures can only be wounded at Slayer 10, 30 and 50.
 - **Dragons:** Wyrmreach's ash drakes, cinder drakes and Old Cinder (level 148). A third of their attacks are dragonfire, which only King Hollis's Wyrmward shield turns aside.
@@ -113,7 +113,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 
 ### The world
 
-- **14 regions and 2 dungeons,** each with its own music: Friendhollow with its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood; the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
+- **14 regions and 2 dungeons,** each with its own music: Friendhollow, with a hanging sign outside every shop and bank and banners of your own Friend around the square, its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood; the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
 - **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
 - **A living world:** walkable rolling hills; a 24-minute day with dark nights lit by lamps, torches and fires; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
 - **Sound everywhere:** 18 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
@@ -126,7 +126,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 
 ### Settings and saves
 
-Progress saves automatically for your wallet and Friend on this device. A **save code** (Settings) keeps the whole
+Progress saves automatically for your wallet and Friend on this device, and **Save and log out** (the ⏻ button by the minimap, or Settings) saves at once and returns to the title screen with a confirmation. A **save code** (Settings) keeps the whole
 adventure in one line of text you can restore on any browser. **Graphics** can be Auto, High or Low (see Checks).
 
 Full rules, levels, monsters and controls: [games/rarefriends-realm/README.md](https://github.com/M4S4T0-V01D/rarefriends-realm/blob/main/games/rarefriends-realm/README.md).
