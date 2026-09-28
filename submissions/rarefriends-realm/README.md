@@ -2,7 +2,7 @@
 
 **▶ Play:** https://m4s4t0-v01d.github.io/rarefriends-realm/ · **🎬 Trailer (1 min):** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/#trailer · **Preview page:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ · **Skill guides:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/guides.html · **Source:** https://github.com/M4S4T0-V01D/rarefriends-realm
 
-*An old-school online adventure starring the Rare Friend you own: nineteen skills, six quests, a large 2.5D world shared
+*An old-school online adventure starring the Rare Friend you own: nineteen skills, seven quests, a large 2.5D world shared
 with everyone playing, and a Hollow King to end.*
 
 ![Two players' Friends, on a unicorn and a black warhorse, chatting by the Friendhollow fountain](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-together.png)
@@ -14,7 +14,7 @@ with everyone playing, and a Hollow King to end.*
 | **Category** | Character Spotlight (also entering Economy Potential and Token Activity) |
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-realm |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-realm/ (GitHub Pages, deployed by CI from `main` after every check passes) |
-| **Trailer and preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a one-minute trailer recorded from the game, what's new, screenshots, casket odds, and a jukebox of all 18 music tracks) |
+| **Trailer and preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a one-minute trailer recorded from the game, what's new, screenshots, casket odds, and a jukebox of all 19 music tracks) |
 | **Stack** | FriendSDK **v0.1.3** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript; Trystero (WebRTC over Nostr relays) in the host page for multiplayer |
 
 **One sentence:** A tick-based, old-school browser MMO where your verified Rare Friend is the hero, drawn from its
@@ -40,6 +40,8 @@ mounts.
 | Riding a unicorn | The Ashen Colossus (world boss) | A duel in the Sparring Ring |
 | --- | --- | --- |
 | ![Riding a unicorn through Friendhollow](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-unicorn.png) | ![The Ashen Colossus in Wyrmreach](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-boss.png) | ![Two players dueling in the Sparring Ring](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-duel.png) |
+| **Fernwick, the woodcutters' village** | **Crossbows (one-handed, so a shield fits)** | **A war bow and Hazel's quiver** |
+| ![Fernwick: timber houses along a street, a willow pond, chopping blocks and a log pile](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-fernwick.png) | ![A Friend with a rarite crossbow and a moonsilver shield](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-crossbow.png) | ![A Friend from behind with Hazel's quiver on its back and a yew war bow](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-quiver.png) |
 | **The stables, beside the Rare Market** | **Hollow Farms** | **Friendhollow Castle** |
 | ![The Friendhollow stables and paddock](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-stables.png) | ![The windmill, farmhouse, coop and cow pen](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-farm.png) | ![Friendhollow Castle's keep and towers](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/castle.png) |
 | **A thunderstorm everyone shares** | **Level-up fireworks at night** | **Gear painted on your Friend** |
@@ -94,10 +96,11 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 ### Skills, combat and quests
 
 - **19 skills on the old-school XP curve** (at a Realm rate of ×3, eased in: about half speed at level 1, the full rate from level 30): Attack, Strength, Defence, Ranged, Hitpoints, Magic, Prayer, Sigilcraft, Woodcutting, Fletching, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas. Click any skill for what it unlocks at every level; a recipe book lists every recipe.
-- **Combat:** four melee styles, Ranged (bows by wood, the best arrows in your pack, three styles), prayers, and a 26-spell book paid in sigils (Darts, Lances and Bursts in four elements, curses, Rootsnare, Gilded Touch, Forgeheart, enchantments and six teleports). Monsters retaliate, some attack on sight, all drop loot, and rare drops stand in a beam of light. Death is safe: you keep your items.
+- **Combat:** four melee styles, Ranged (bows by wood, the best arrows in your pack, three styles; war bows that draw slower and hit harder; crossbows in six metal tiers that fire bolts and leave a hand free for a shield), prayers, and a 26-spell book paid in sigils (Darts, Lances and Bursts in four elements, curses, Rootsnare, Gilded Touch, Forgeheart, enchantments and six teleports). Monsters retaliate, some attack on sight, all drop loot, and rare drops stand in a beam of light. Death is safe: you keep your items.
 - **Slayer:** Warden Thistle gives kill tasks and points for rewards; some creatures can only be wounded at Slayer 10, 30 and 50.
 - **Dragons:** Wyrmreach's ash drakes, cinder drakes and Old Cinder (level 148). A third of their attacks are dragonfire, which only King Hollis's Wyrmward shield turns aside.
-- **Six quests (9 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, The Lost Glimmer, and The Hollow King (level 92 boss).
+- **Seven quests (10 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, Hazel's Quiver (its reward, worn on your back, calls four in five arrows and bolts home), The Lost Glimmer, and The Hollow King (level 92 boss).
+- **Crossbows and war bows:** crossbow limbs are smithed at the anvil (two bars) and fitted with Crafting to a stock carved from logs: pewter on a plain stock, blackiron and ashsteel on oak, moonsilver on willow, glimmer on maple, rarite on yew. Bolts come from the anvil (twelve a bar) and are feathered with Fletching. War bows take two logs of any wood; the plain one needs Ranged 5, and only Hazel in Fernwick sells them.
 - **Mastery capes:** reach 99 and the Keeper of Capes sells that skill's cape; master two skills and they come trimmed.
 
 ### Playing together
@@ -113,10 +116,10 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 
 ### The world
 
-- **14 regions and 2 dungeons,** each with its own music: Friendhollow, with a hanging sign outside every shop and bank and banners of your own Friend around the square, its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood; the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
+- **15 regions and 2 dungeons,** each with its own music: Friendhollow, with a hanging sign outside every shop and bank and banners of your own Friend around the square, its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood and Fernwick, its woodcutters' village (Hazel's War Bows, a timber yard, a bank and a willow pond); the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
 - **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Every fish is its own species, chicken is a drumstick and beef a steak (browned with grill marks when cooked), and each ore shows its own metal's veins. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
 - **A living world:** walkable rolling hills; a 24-minute day with dark nights lit by lamps, torches and fires; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
-- **Sound everywhere:** 18 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
+- **Sound everywhere:** 19 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
 
 ### Daily play and collecting
 
@@ -220,7 +223,7 @@ multiplayer testing, and being awesome.
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 53 engine tests: the XP curve and formulas; woodcutting, firemaking and cooking; fishing; mining, smelting and smithing; thieving; an agility lap; Fletching; Sigilcraft; combat, loot, aggression and safe death; magic and its utility spells; prayer; Ranged, Slayer and dragonfire; mastery capes; A Friend's Feast and Grumblin Trouble end to end; the castle stairs; pathfinding and menus; shops, selling and buy-back, the bank; saves (round trip, tampering, old ids); caskets, bundles, mounts; trading (including crossed requests and a lost message); shared fights and the world boss's shared loot; duels; pets; achievements and hiscores; the daily streak, challenges and chest; the update log; referrals and their daily cap; first steps; world determinism and on-foot reachability of every station, NPC, ladder and boss | Pass |
+| `npm test`: 56 engine tests: the XP curve and formulas; woodcutting, firemaking and cooking; fishing; mining, smelting and smithing; thieving; an agility lap; Fletching; Sigilcraft; combat, loot, aggression and safe death; magic and its utility spells; prayer; Ranged, Slayer and dragonfire; crossbows, bolts and war bows (parts, fitting, ammo, speed and punch); Hazel's Quiver end to end, and shots returning to the quiver; mastery capes; A Friend's Feast and Grumblin Trouble end to end; the castle stairs; pathfinding and menus; shops, selling and buy-back, the bank; saves (round trip, tampering, old ids); caskets, bundles, mounts; trading (including crossed requests and a lost message); shared fights and the world boss's shared loot; duels; pets; achievements and hiscores; the daily streak, challenges and chest; the update log; referrals and their daily cap; first steps; world determinism and on-foot reachability of every station, NPC, ladder and boss | Pass |
 | `npm run check` (`friendsdk check`) | Pass: valid; expected reward 0.88 RF, max 5 RF |
 | Browser, SDK runtime with a two-Friend mock wallet: title screen; a real mouse click chops a tree and First steps moves on; right-click menus and dialogue; WASD; chat; camera turn, tilt and compass; a level-up; smelting; a shop; A Friend's Feast; combat; bank; world map; 5 caskets through the runtime's confirmations; a Rare Market bundle; adventurer card → Post to X; the Realm Daily (claim, challenges, update log); a performance check (see below); the castle's spiral stairs by real clicks; nightfall; a 14-region tour; save restored after reload | Pass |
 | Browser, two players in two tabs (and, over the real public relays, with direct links blocked): seeing each other walk, right-click menu, friends list, party bonus, public chat, whispers (links stripped), emotes and emote sync, a shared drop, a full trade by clicks, a duel in the ring, a shared fight, a referral, going offline | Pass |
