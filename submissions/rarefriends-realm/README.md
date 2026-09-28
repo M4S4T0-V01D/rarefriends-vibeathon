@@ -114,7 +114,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 ### The world
 
 - **14 regions and 2 dungeons,** each with its own music: Friendhollow with its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood; the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
-- **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it.
+- **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
 - **A living world:** walkable rolling hills; a 24-minute day with dark nights lit by lamps, torches and fires; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
 - **Sound everywhere:** 18 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
 
