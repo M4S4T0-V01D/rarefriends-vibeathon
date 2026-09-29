@@ -2,10 +2,10 @@
 
 **▶ Play:** https://m4s4t0-v01d.github.io/rarefriends-realm/ · **🎬 Trailer (1 min):** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/#trailer · **Preview page:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ · **Skill guides:** https://m4s4t0-v01d.github.io/rarefriends-realm/preview/guides.html · **Source:** https://github.com/M4S4T0-V01D/rarefriends-realm
 
-*An old-school online adventure starring the Rare Friend you own: nineteen skills, seven quests, a large 2.5D world shared
-with everyone playing, and a Hollow King to end.*
+*An old-school online adventure starring the Rare Friend you own: nineteen skills, twelve quests, a large 2.5D world under
+real light and shadow, shared with everyone playing, and a Hollow King to end.*
 
-![Two players' Friends, on a unicorn and a black warhorse, chatting by the Friendhollow fountain](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-together.png)
+![Dusk over Friendhollow: long shadows across the square, a knight in gold Dawnplate, villagers in hats and capes, lamps coming on](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-light-dusk.png)
 
 | | |
 | --- | --- |
@@ -14,14 +14,40 @@ with everyone playing, and a Hollow King to end.*
 | **Category** | Character Spotlight (also entering Economy Potential and Token Activity) |
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-realm |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-realm/ (GitHub Pages, deployed by CI from `main` after every check passes) |
-| **Trailer and preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a one-minute trailer recorded from the game, what's new, screenshots, casket odds, and a jukebox of all 21 music tracks) |
-| **Stack** | FriendSDK **v0.1.3** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript; Trystero (WebRTC over Nostr relays) in the host page for multiplayer |
+| **Trailer and preview page** | https://m4s4t0-v01d.github.io/rarefriends-realm/preview/ (a trailer recorded from the game with its new lighting, what's new, looping clips, screenshots, casket odds, and a jukebox of all 21 music tracks) |
+| **Stack** | FriendSDK **v0.1.4** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript; Trystero (WebRTC over Nostr relays) in the host page for multiplayer |
 
 **One sentence:** A tick-based, old-school browser MMO where your verified Rare Friend is the hero, drawn from its
-canonical on-chain sprite with its family's perk and dressed in the gear you wear. You train nineteen skills and finish six
-quests on a 240 × 240 tile island, playing alongside everyone else online: chatting, trading, dueling and bringing down a world
-boss together. Simulated $RAREFRIENDS buys Rare Caskets (kept-or-redeemed relics and wardrobe pieces), bundles and
+canonical on-chain sprite with its family's perk and dressed in the gear you wear. You train nineteen skills and finish twelve
+quests on a 350 × 200 tile island lit by a real sun, lamps and fire, playing alongside everyone else online: chatting, trading,
+dueling and bringing down a world boss together. Simulated $RAREFRIENDS buys Rare Caskets (kept-or-redeemed relics and wardrobe pieces), bundles and
 mounts.
+
+## New: real lighting and the Faith update
+
+The Realm is lit for real. The sun crosses the sky and everything casts a shadow that follows it (buildings, walls, trees,
+rocks, characters, mounts), long and golden at dusk, short at noon, faint under the moon. Lamps, torches, fires, forges and
+spells light the ground and whatever stands near them, with walls and trees blocking their light and one bounce of it off
+the ground; ambient occlusion shades alleys and forest floors, lava glows, dungeons are truly dark, and the haze follows the
+land. It's all Canvas 2D: a light field built each frame in world space, projected onto the ground, with every object tinted
+by the light at its own feet and cut to its exact outline, so light lands on things instead of glowing over them.
+
+**The Faith update:** Prayer is now Faith, and the Order of the Dawn keeps Dawnhold east of Highcairn: five new quests
+(The Dawn Vigil, Light in the Greyhorn, The Pilgrim's Road, The Restless Crypt, Dawn Against the Hollow), seven faith
+weapons that train Faith a little with every hit and hurt the undead harder, bone offerings at altars, and Dawnplate, gold
+armour with white trim. Armour now shows on your Friend (breastplates, greaves, helms closed all round), Threadneedle
+Tailors sells capes in ten colours and seven patterns and new hats, amulets hang round your neck, the townsfolk wear their
+own hats and capes, and health bars only show in a fight.
+
+| Dusk falls on Friendhollow | The Order of the Dawn at Dawnhold | A knight in Dawnplate |
+| --- | --- | --- |
+| ![The sun sets over Friendhollow: shadows stretch and swing, the light warms, then night falls and the lamps take over](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-dusk.gif) | ![Orbiting Dawnhold, the Order of the Dawn's chapterhouse, with knights in gold and white](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-dawnhold.gif) | ![A Friend in gold Dawnplate walking through Friendhollow at evening](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-knight.gif) |
+| **A day in Whisperwood** | **Campfires at night** | **The Dawnhold chapel** |
+| ![Tree shadows sweeping round from morning to evening](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-forest-light.gif) | ![Two campfires lighting the forest at night, with fireflies](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-night-fire.gif) | ![Torchlight inside the Dawnhold chapel at night](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-chapel.gif) |
+| **A moonlit unicorn at dawn** | **Wyrmreach's lava at dusk** | **Night in the square** |
+| ![Riding the moonlit unicorn through Friendhollow at dawn](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-unicorn-dawn.gif) | ![Lava lighting the rocks of Wyrmreach as dusk falls](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/gifs/realm-lava.gif) | ![Friendhollow at night, lamp pools and a campfire lighting the cobbles](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-light-night.png) |
+| **Dawnplate** | **Townsfolk in hats and capes** | **The crypt by firelight** |
+| ![A Friend in gold Dawnplate with the Cape of the Dawn](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-dawnplate.png) | ![Villagers in wizard hats, feathered caps and capes](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-townsfolk.png) | ![The Murkmire crypt lit only by fires](https://raw.githubusercontent.com/M4S4T0-V01D/rarefriends-realm/main/docs/new-crypt-lit.png) |
 
 ## The Realm in motion
 
@@ -75,7 +101,7 @@ npm run check      # FriendSDK game validation
 npm test           # engine tests;  npm run test:browser for the browser checks
 ```
 
-Node.js 22+. FriendSDK v0.1.3 is vendored from the official v0.1.3 release archive (the hotfix for owned-Friend discovery on Robinhood mainnet).
+Node.js 22+. FriendSDK v0.1.4 is vendored from the official v0.1.4 release archive (SHA-256 checked); the preview build carries no transaction-capable code.
 
 ## How to play
 
@@ -91,15 +117,17 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 - **Mouse:** left-click does the first option (shown top-left). Right-click, or long-press on touch, lists every option (*Chop down*, *Attack Grumblin (level-5)*, *Talk-to*, *Pickpocket*, *Examine*…) in the world and in every interface: bank, shops, spellbook, prayers, equipment, production, compass and minimap.
 - **Keyboard:** WASD walks. ← → turn and ↑ ↓ tilt the camera (or drag with the scroll wheel held); the compass turns north to the top. R toggles run, H mounts or dismounts, M opens the world map, Enter chats, F1–F9 switch tabs, and Space and 1–5 drive dialogue. Scroll zooms; the minimap walks you anywhere.
 - **The tick:** everything runs on a 0.6 s game tick. You walk one tile a tick, two when running, two or three on a mount.
-- **Accessibility:** mute, music and effects volumes, reduced motion (honoured throughout), and Graphics: Auto, High or Low.
+- **Accessibility:** mute, music and effects volumes, reduced motion (honoured throughout), and Graphics: High (the default) or Low, kept in the browser.
 
 ### Skills, combat and quests
 
-- **19 skills on the old-school XP curve** (at a Realm rate of ×3, eased in: about half speed at level 1, the full rate from level 30): Attack, Strength, Defence, Ranged, Hitpoints, Magic, Prayer, Sigilcraft, Woodcutting, Fletching, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas. Click any skill for what it unlocks at every level; a recipe book lists every recipe.
+- **19 skills on the old-school XP curve** (at a Realm rate of ×3, eased in: about half speed at level 1, the full rate from level 30): Attack, Strength, Defence, Ranged, Hitpoints, Magic, Faith, Sigilcraft, Woodcutting, Fletching, Fishing, Cooking, Firemaking, Mining, Smithing, Crafting, Thieving, Agility, Slayer. Gathering rolls, burn chances, accuracy and max hits follow the classic formulas. Click any skill for what it unlocks at every level; a recipe book lists every recipe.
 - **Combat:** four melee styles, Ranged (bows by wood, the best arrows in your pack, three styles; war bows that draw slower and hit harder; crossbows in six metal tiers that fire bolts and leave a hand free for a shield), prayers, and a 26-spell book paid in sigils (Darts, Lances and Bursts in four elements, curses, Rootsnare, Gilded Touch, Forgeheart, enchantments and six teleports). Monsters retaliate, some attack on sight, all drop loot, and rare drops stand in a beam of light. Death is safe: you keep your items.
 - **Slayer:** Warden Thistle gives kill tasks and points for rewards; some creatures can only be wounded at Slayer 10, 30 and 50.
 - **Dragons:** Wyrmreach's ash drakes, cinder drakes and Old Cinder (level 148). A third of their attacks are dragonfire, which only King Hollis's Wyrmward shield turns aside.
-- **Seven quests (10 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, Hazel's Quiver (its reward, worn on your back, calls four in five arrows and bolts home), The Lost Glimmer, and The Hollow King (level 92 boss).
+- **Twelve quests (19 quest points):** A Friend's Feast, Grumblin Trouble, The Cold Forge, Hollow Whispers, Hazel's Quiver (its reward, worn on your back, calls four in five arrows and bolts home), The Lost Glimmer, The Hollow King (level 92 boss), and five for the Order of the Dawn: The Dawn Vigil, Light in the Greyhorn, The Pilgrim's Road, The Restless Crypt and Dawn Against the Hollow.
+- **Faith and the Order of the Dawn:** bury bones, or offer them on an altar for twice the XP (three times in the Dawnhold chapel); faith weapons (four melee, three staffs) need Faith to wield, give a little Faith XP with every hit and hurt the undead (skeletons, shades, the Hollow) harder; the Order's quests award the Cape of the Dawn and Dawnplate (Defence 70, Faith 60).
+- **Dress your Friend:** helms, breastplates, greaves and shields are drawn on your Friend (helms closed all round), capes come in ten colours and seven patterns from Threadneedle Tailors on Market Street along with wizard hats, feathered caps and traveller's hats, and amulets hang round the neck.
 - **Two-handed weapons and new creatures:** greatswords, battleaxes and war hammers in every metal (slower, harder hitting, no shield), from the anvil or Heft & Haft; forest spiders, wild boars, sand scorpions, highland goats and stone golems, each with a drop only it gives, plus Grumblin spears and Mossy staffs.
 - **Highcairn and the Greyhorn Highlands:** the island swells east into walkable snowy mountains with a ragged new coast, around Highcairn, a stone town with a bank, stores, an inn, a forge, a shrine and a Rare Market trader, and the Greyhorn mine above it.
 - **Sheep, wool and string:** shear the sheep (they look shorn until the wool grows back), spin the wool into string at a spinning wheel (Crafting 1), and string bows (cut unstrung from logs) and gems into amulets.
@@ -125,7 +153,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 
 - **17 regions and 2 dungeons,** each with its own music: Friendhollow, with a hanging sign outside every shop and bank and banners of your own Friend around the square, its three-storey castle (spiral stairs up to King Hollis's hall and the battlements), Market Street, the stables and the Sparring Ring; Hollow Farms with its windmill and farmhouse; the Wizards' Tower; Wyrmreach; Whisperwood and Fernwick, its woodcutters' village (Hazel's War Bows, a timber yard, a bank and a willow pond); the Ashen Hills; Emberforge; Frostpeak; Glass Lake; the Pale Dunes and the Oasis; the Murkmire; the Mossy Ruins; the Pale Coast; the Murkmire Crypt and the Hollow Depths.
 - **Pixel art in the Rare Friends style:** trees, rocks, buildings, ground, items and creatures in chunky pixels with an ink edge. Every fish is its own species, chicken is a drumstick and beef a steak (browned with grill marks when cooked), and each ore shows its own metal's veins. Roofs lift as you walk in, and walls in front of you drop to a cutaway. Helms, hats, shields and weapons are painted into your Friend's own pixels and move with it, and every swing, chop, cast and hammer blow animates right there in the sprite.
-- **A living world:** walkable rolling hills; a 24-minute day with dark nights lit by lamps, torches and fires; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
+- **A living world, really lit:** walkable rolling hills; a 24-minute day under a sun that crosses the sky, with shadows from everything that follow it and nights lit by lamps, torches and fires that cast shadows of their own; villagers in their own hats and capes; weather from the real clock that every player shares (rain, thunderstorms with lightning, dawn fog); birds, butterflies, leaves, snow, fireflies; footprints in snow and sand; hoofbeats when you ride.
 - **Sound everywhere:** 21 procedural tracks in an old-school MIDI style, a voice for every creature, footsteps by ground, weather and ambience.
 
 ### Daily play and collecting
@@ -137,7 +165,7 @@ a gold arrow (and a star on the minimap) shows where to go, each step completes 
 ### Settings and saves
 
 Progress saves automatically for your wallet and Friend on this device, and **Save and log out** (the ⏻ button by the minimap, or Settings) saves at once and returns to the title screen with a confirmation. A **save code** (Settings) keeps the whole
-adventure in one line of text you can restore on any browser. **Graphics** can be Auto, High or Low (see Checks).
+adventure in one line of text you can restore on any browser. **Graphics** can be High (the default) or Low; settings are kept in the browser (see Checks).
 
 Full rules, levels, monsters and controls: [games/rarefriends-realm/README.md](https://github.com/M4S4T0-V01D/rarefriends-realm/blob/main/games/rarefriends-realm/README.md).
 
@@ -193,7 +221,7 @@ a gift. The RF price buys that many Rare Caskets, and the mount comes with them.
 
 **Economy design:** coins are earn-only and never convert to RF, so the game is complete without spending. RF is a boost
 and a collection (relics, wardrobe, mounts), not a paywall, and holding more (and better-generation) Friends pays off as
-followers. Proposed future RF integrations, which need APIs beyond SDK v0.1.3: cloud saves, a holder-to-holder trading
+followers. Proposed future RF integrations, which need APIs beyond SDK v0.1.4: cloud saves, a holder-to-holder trading
 post, RF-priced cosmetics with burn, live Dice-RNG caskets, and on-chain world-boss leaderboards.
 
 ## SDK integration notes
@@ -218,7 +246,7 @@ runtime just verified, and validates every field of a save on load. There are no
 
 The world, creatures, townsfolk Friends, mounts, pets, item art, music and sound effects are original procedural code. Your
 Friend and your followers use their canonical Generations sprites; Old Glimmer (#7730) and Brother Ossic (#3412) use the
-canonical sample frames from FriendSDK v0.1.3. Rare Friends artwork is used under the FriendSDK NOTICE. Gameplay is
+canonical sample frames from FriendSDK v0.1.4. Rare Friends artwork is used under the FriendSDK NOTICE. Gameplay is
 inspired by classic browser RPGs such as *Old School RuneScape*; the Realm's places, metals, gems, sigils, spells, prayers
 and items have their own names, and no assets or code from it are used.
 
@@ -230,7 +258,7 @@ multiplayer testing, and being awesome.
 | Check | Result |
 | --- | --- |
 | `npm run typecheck` (tsc strict: game, host, preview page) | Pass |
-| `npm test`: 64 engine tests: the XP curve and formulas; woodcutting, firemaking and cooking; fishing; mining, smelting and smithing; thieving; an agility lap; Fletching; Sigilcraft; combat, loot, aggression and safe death; magic and its utility spells; prayer; Ranged, Slayer and dragonfire; crossbows, bolts and war bows (parts, fitting, ammo, speed and punch); Hazel's Quiver end to end, and shots returning to the quiver; the forged tiers (materials, smelting, smithing, levels); bank tabs and rearranging; the inkcoal satchel and the sigil stone box; sheep, spinning and stringing; beginner fishing and cooking; ruins placement; mastery capes; A Friend's Feast and Grumblin Trouble end to end; the castle stairs; pathfinding and menus; shops, selling and buy-back, the bank; saves (round trip, tampering, old ids); caskets, bundles, mounts; trading (including crossed requests and a lost message); shared fights and the world boss's shared loot; duels; pets; achievements and hiscores; the daily streak, challenges and chest; the update log; referrals and their daily cap; first steps; world determinism and on-foot reachability of every station, NPC, ladder and boss | Pass |
+| `npm test`: 66 engine tests, and a check that the preview build (`runtime.js`, `game.js`) carries no transaction-capable code (FriendSDK v0.1.4 preview builds). The engine tests cover: the XP curve and formulas; woodcutting, firemaking and cooking; fishing; mining, smelting and smithing; thieving; an agility lap; Fletching; Sigilcraft; combat, loot, aggression and safe death; magic and its utility spells; prayer; Ranged, Slayer and dragonfire; crossbows, bolts and war bows (parts, fitting, ammo, speed and punch); Hazel's Quiver end to end, and shots returning to the quiver; the forged tiers (materials, smelting, smithing, levels); bank tabs and rearranging; the inkcoal satchel and the sigil stone box; sheep, spinning and stringing; beginner fishing and cooking; ruins placement; mastery capes; A Friend's Feast and Grumblin Trouble end to end; the castle stairs; pathfinding and menus; shops, selling and buy-back, the bank; saves (round trip, tampering, old ids); caskets, bundles, mounts; trading (including crossed requests and a lost message); shared fights and the world boss's shared loot; duels; pets; achievements and hiscores; the daily streak, challenges and chest; the update log; referrals and their daily cap; first steps; Faith (offerings, faith weapons, the undead bonus) and all five Order of the Dawn quests end to end; world determinism and on-foot reachability of every station, NPC, ladder and boss | Pass |
 | `npm run check` (`friendsdk check`) | Pass: valid; expected reward 0.88 RF, max 5 RF |
 | Browser, SDK runtime with a two-Friend mock wallet: title screen; a real mouse click chops a tree and First steps moves on; right-click menus and dialogue; WASD; chat; camera turn, tilt and compass; a level-up; smelting; a shop; A Friend's Feast; combat; bank; world map; 5 caskets through the runtime's confirmations; a Rare Market bundle; adventurer card → Post to X; the Realm Daily (claim, challenges, update log); a performance check (see below); the castle's spiral stairs by real clicks; nightfall; a 14-region tour; save restored after reload | Pass |
 | Browser, two players in two tabs (and, over the real public relays, with direct links blocked): seeing each other walk, right-click menu, friends list, party bonus, public chat, whispers (links stripped), emotes and emote sync, a shared drop, a full trade by clicks, a duel in the ring, a shared fight, a referral, going offline | Pass |
@@ -239,11 +267,11 @@ multiplayer testing, and being awesome.
 | All of the above in GitHub Actions before each Pages deploy | Pass |
 | Real play on Robinhood mainnet with a real wallet, including multiplayer with a second player | Pass (played by the builder with a friend) |
 
-**Performance.** Settings → Graphics offers Auto, High and Low. Low turns off pixel textures, ambient life, fog and footprints,
-lightens the rain, shortens the view and draws at 1×. Auto starts on High and switches to Low by itself if the frame rate stays
-under about 36 fps. The browser check measures frame cost at three busy scenes on every run, headless and without a GPU:
-Friendhollow 41 ms on High / 7 ms on Low, dense forest 35 / 8 ms, a stormy night 18 / 8 ms. On a desktop GPU (an RTX 2060)
-High takes about 22 ms in the busiest view.
+**Performance.** Settings → Graphics offers High (the default, with the full lighting and shadows) and Low; they never change
+by themselves. Low turns off pixel textures, cast shadows, ambient life, fog and footprints, leaves a clear day unlit, lightens
+the rain, shortens the view and draws at 1×; High draws at up to 1.5× on high-DPI screens. The browser check measures frame
+cost at three busy scenes on every run, in GitHub Actions, headless and without a GPU (software rendering): Friendhollow
+49 ms on High / 10 ms on Low, dense forest 74 / 10 ms, a stormy night 37 / 10 ms. A GPU draws High far faster.
 
 **Known limitations:**
 - Saves are client-side, per device and browser, keyed by wallet and Friend; save codes carry them to another browser.
