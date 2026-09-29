@@ -14,7 +14,7 @@
 | **Source repository** | https://github.com/M4S4T0-V01D/rarefriends-cafe |
 | **Playable preview** | https://m4s4t0-v01d.github.io/rarefriends-cafe/ (GitHub Pages, deployed by CI from `main`) |
 | **Preview page** | https://m4s4t0-v01d.github.io/rarefriends-cafe/preview/ (screenshots, features, capsule odds, play button, and a record button that plays the game's Street Bossa) |
-| **Stack** | FriendSDK **v0.1.2** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript |
+| **Stack** | FriendSDK **v0.1.4** (SDK `GameHost` + CLI game build), React 19, Canvas 2D, WebAudio, TypeScript |
 
 **One sentence:** A greyscale 2.5D isometric shop sim where your owned Rare Friend is the manager. Your other owned
 Friends are staff, tiered by their on-chain generation, and Rare Friends walking down the street become your customers.
@@ -53,7 +53,7 @@ npm run dev        # http://localhost:4173   (npm run dev:lan to play from a pho
 npm run build      # static site → games/rarefriends-cafe/.friendsdk/
 ```
 
-Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official `v0.1.2` tag.
+Node.js 22+. FriendSDK v0.1.4 is vendored from the official v0.1.4 release archive (SHA-256 checked); its preview build carries no transaction-capable code.
 
 ## How to play
 
@@ -84,11 +84,11 @@ Node.js 22+. FriendSDK v0.1.2 is vendored as a tarball packed from the official 
 - **Consumable:** one capsule opens into exactly one recipe; single settlement, no reroll.
 - **Backing:** each purchased or pending capsule reserves 5 RF; kept recipes keep their fixed RF backing, with no expiry. Redeeming removes that recipe's bonus.
 - **Collectibles:** every capsule also grants an uncollected exclusive of its tier, or Beans for duplicates (40/80/160/400). Collectibles carry no RF value and are saved with your shop.
-- **RF boosts and RF sceneries, paid with capsules:** the v0.1.2 bridge has no generic "spend RF on an upgrade" action, so these are paid with capsules bought with RF. They still open and settle through the SDK (keep or redeem their recipes) but give the boost or scenery instead of a collectible. Boosts: Tireless crew (2 capsules, 3 days), Perfect service (2, 1 day), Street festival (3, 2 days), Golden hour (3, 2 days). Sceneries, kept for good: Seaside and Snowy village (3), Cherry blossom lane (4), Night market (5).
+- **RF boosts and RF sceneries, paid with capsules:** the v0.1.4 bridge has no generic "spend RF on an upgrade" action, so these are paid with capsules bought with RF. They still open and settle through the SDK (keep or redeem their recipes) but give the boost or scenery instead of a collectible. Boosts: Tireless crew (2 capsules, 3 days), Perfect service (2, 1 day), Street festival (3, 2 days), Golden hour (3, 2 days). Sceneries, kept for good: Seaside and Snowy village (3), Cherry blossom lane (4), Night market (5).
 
 Capsules use the SDK chance-game client (`buy` / `play` / `settle` / `redeem`) with runtime confirmations. **Economy design:**
 Beans are earn-only; RF is a boost, not a paywall; holding more (and better-generation) Friends pays off as stronger staff.
-Proposed future RF integrations, which need APIs beyond SDK v0.1.2: cloud saves, RF-priced premium décor with burn,
+Proposed future RF integrations, which need APIs beyond SDK v0.1.4: cloud saves, RF-priced premium décor with burn,
 live Dice-RNG capsules, visiting other holders' shops with RF tips, and staff revenue share.
 
 ### SDK integration notes
@@ -104,7 +104,7 @@ verified. There are no signatures or extra prompts.
 
 Scenery, rooms, street, furniture, RF exclusives, dish icons, procedural guest Friends, and all music and sound effects are
 original code. The manager and owned staff use their canonical Generations sprites. Regulars #7730 and #3412 use canonical
-sample frames from FriendSDK v0.1.2. UI cues use the FriendSDK sound kit. Rare Friends artwork is used under the FriendSDK
+sample frames from FriendSDK v0.1.4. UI cues use the FriendSDK sound kit. Rare Friends artwork is used under the FriendSDK
 NOTICE. Gameplay inspired by café management games such as *Moe Girl Cafe 2*; no assets from them are used.
 
 ## Checks and known issues
